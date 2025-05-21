@@ -8,6 +8,7 @@ import PublicRoute from "./components/PublicRoute";
 import Layout from "./layouts/Layout";
 import Contact from "./components/Contact";
 import Home from "./Home";
+import Profile from "./components/Profile";
 // import Products from "./components/Products";
 
 export default function App() {
@@ -33,6 +34,18 @@ export default function App() {
     {
       element: <Layout />,
       children: [
+         {
+      path: "/home",
+      element: (
+        <PrivateRoute>
+          <Home />
+        </PrivateRoute>
+      ),
+      children: [
+        // { path: "about", element: <About /> },
+        // { path: "contact", element: <Contact /> },
+      ],
+    },
         {
           path: "contact",
           element: (
@@ -50,17 +63,14 @@ export default function App() {
       ),
         },
         {
-      path: "/home",
-      element: (
+          path: "/profile",
+          element: (
         <PrivateRoute>
-          <Home />
+          <Profile/>
         </PrivateRoute>
       ),
-      children: [
-        // { path: "about", element: <About /> },
-        // { path: "contact", element: <Contact /> },
-      ],
-    },
+        },
+       
       ],
     },
     // { path: "products", element: <Products /> },

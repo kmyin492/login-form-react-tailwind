@@ -77,10 +77,10 @@ export const Nav = () => {
         </nav>
       </div>
       <div className="flex flex-col gap-2 justify-center border-t border-white/30 pt-4">
-        <div className="flex items-center gap-2 hover:bg-green-600 p-2 rounded-md border-t border-white/30">
+        <NavLink to="/profile" className="flex items-center gap-2 hover:bg-green-600 p-2 rounded-md border-t border-white/30">
           <User size={20} />
           <span className={`${isOpen ? "block" : "hidden"}`}>{username}</span>
-        </div>
+        </NavLink>
         <button
           onClick={handleLogout}
           className="flex items-center gap-2 hover:bg-green-600 p-2 rounded-md text-left border-t border-white/30"
