@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="min-h-[200vh] bg-green-200 text-green-700">
+    <div className="min-h-[200vh] bg-gradient-to-b from-gay-100 to-green-700 text-green-700">
       {/* Hero Section */}
       <section className="h-screen flex flex-col items-center justify-center px-6 text-center">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to Our Platform</h1>
